@@ -1,0 +1,58 @@
+<% include ./layouts/header %>
+
+<h1 id="dash">Dashboard</h1>
+
+<body>
+
+<div class="elementoDash">
+<form class="lel" id="lel" action="/series/1" method="POST">
+   
+        <legend>Add a serie</legend>
+
+        <label>Title</label>
+        <input id="title" name="title" type="text" placeholder="title">
+
+        <label>Cover</label>
+        <input id="cover" name="cover" type="text" placeholder="cover">
+
+        <label>Sinopsis</label>
+        <input id="synopsis" name="synopsis" type="text" placeholder="synopsis">
+
+        <select name="estate" id="estate">
+          <option value="Activo">Activo</option>
+          <option value="Finalizado">Finalizado</option>
+          <option value="Suspendido">Suspendido</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+
+        <select name="type" id="type">
+          <option value="Anime">Anime</option>
+          <option value="OVA">OVA</option>
+          <option value="Pelicula">Pelicula</option>
+          <option value="Corto">Corto</option>
+        </select>
+
+        <select multiple="multiple" name="tags" type="text" id="tags" >
+          <option value="Accion">Accion</option>
+          <option value="Aventura">Aventura</option>
+          <option value="Seinen">Seinen</option>
+          <option value="Yuri">Yuri</option>
+        </select>
+         
+
+        <button type="submit" class="button-primary" id="btn" style="background-color: white;">Enviar</button>
+    
+</form>
+&nbsp;
+<h2>Agregar nuevo capitulo</h2>
+&nbsp;
+
+</div>
+ <script>
+   $('#lel').on('btn', function(e) {
+        e.preventDefault();
+        var cuisines = $('tags').val().join(',');
+    });
+ </script>
+<% include ./layouts/footer %>
+</html>

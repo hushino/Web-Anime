@@ -1,0 +1,23 @@
+<% include ./layouts/header %>
+<div class="elemento">
+<form class="pure-form pure-form-stacked" action="/users/register"  method="POST">
+    <fieldset>
+        <legend>A Stacked Form</legend>
+
+        <label for="email">Email</label>
+        <input id="inputEmail" name="email" type="email" placeholder="Email">
+
+        <label for="inputUsername">Username</label>
+        <input id="inputUsername" name="username" type="text" placeholder="Username">
+
+        <label for="password">Password</label>
+        <input id="inputPassword" name="password" type="password" placeholder="Password">
+
+        <label for="inputConfirmPassword">Confirm Password</label>
+        <input id="inputConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password">
+
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+</form>
+</div>
+<% include ./layouts/footer %>
